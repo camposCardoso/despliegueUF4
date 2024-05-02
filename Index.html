@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EASY PEASY</title>
+	<link rel="stylesheet" href="CSS/Style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script src="JS/Scripts.js"></script>
+
+	<!--Fuentes-->
+	<!-- Fuente Notable-->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Notable&display=swap" rel="stylesheet">
+
+	<!-- Fuente Inter-->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+	<!-- Fuente Atma-->
+	<link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Inter:wght@100..900&family=Notable&display=swap" rel="stylesheet">
+
+
+
+	<!-- ICONOS FONTAWESOME-->
+
+	<script src="https://kit.fontawesome.com/477f7919f8.js" crossorigin="anonymous"></script>
+
+	
+	<!-- PRECARGA DE IMAGENES-->
+	<link rel="preload" as="image" href="Media/fondo.jpg">
+	<link rel="preload" as="image" href="Media/fondo2.jpg">
+	<link rel="preload" as="image" href="Media/fondo3.jpg">
+
+
+	<!-- AOS ANIMATION LIBRARY-->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="parallax.js-1.5.0/parallax.min.js"></script>
+
+
+</head>SSSS
+<body>
+
+<h1> V1.0><h1>
+
+	<!-- MODAL DE BIENVENIDA-->
+
+	<div id="modalBienvenida">
+		<div id="modaleBoxB">
+			<h1> Welcome Specialty Coffee Lover</h1>
+			<button onclick="cerrarMBB()">Start</button>
+		</div>
+
+	</div>
+
+		<header id="encabezado">
+
+			<a href="Index.html">
+				<img id="logo" src="Media/logo.png" alt="">
+			</a>
+
+			<div class="fondosHero" id="fondoHero1"></div>
+			<div class="fondosHero" id="fondoHero2"></div>
+			<div class="fondosHero" id="fondoHero3"></div>
+
+
+
+			<!-- Aqui empieza el Menu horizontal  -->
+
+
+				 <nav id="navbar">
+					<ul id="menu">
+		
+						<li class="elementoMenu"><a href="#encabezado">Home</a></li>
+						<li class="elementoMenu"><a href="#aboutUs">About us</a></li>
+						<li class="elementoMenu"><a href="#carta">Menu</a>
+
+							<ul id= "subMenu">
+								<li class="elementoSub"><a href="#carta" onclick="marcarPestana('CartaCoffee', 'tabCoffee')">Coffee</a></li>
+								<li class="elementoSub"><a href="#carta" onclick="marcarPestana('CartaToasts', 'tabToasts')">Toasts</a></li>
+								<li class="elementoSub"><a href="#carta" onclick="marcarPestana('CartaBowls', 'tabBowls')">Bowls</a></li>
+							</ul>
+						</li>
+						<li class="elementoMenu"><a href="#shop">Shop</a></li>
+						<li class="elementoMenu"><a href="#gallery">Gallery</a></li>
+						<li class="elementoMenu"><a href="#contact">Contact</a></li>
+
+
+					</ul>
+				</nav> 
+
+			<h1 id="tituloEncabezado">For Specialty Coffee Lovers</h1>
+
+				
+		</header>
+
+		<section id="aboutUs">
+
+			<h2 class="tituloSeccion" data-aos="flip-left">ABOUT US</h2>
+			<div id="contenedoraboutUs">
+				
+				<div class="colAbout">
+				<!--	<div id="imgAbout">
+						<img src="Media/coworking1.jpg" alt="">
+					</div> -->
+
+					<video src="Media/video.mp4" id="imgAbout" controls muted autoplay ></video>
+
+					
+				</div>
+				<div class="colAbout">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+
+
+			</div>
+			
+
+
+
+
+		</section>
+
+
+
+
+		<section id="carta">
+
+			<h2 class="tituloSeccion titulosNegro" data-aos="flip-left">CARTA</h2>
+
+			<div id="contenedorEtiquetasPestanas">
+				
+
+				<p id="tabCoffee" class="etiquetaPestanas pestanaActiva" onclick="marcarPestana('CartaCoffee', 'tabCoffee')" data-aos="flip-left">COFFEE</p>
+				<p id="tabToasts" class="etiquetaPestanas"  onclick="marcarPestana('CartaToasts', 'tabToasts')" data-aos="flip-left">TOASTS</p>
+				<p id="tabBowls" class="etiquetaPestanas" onclick="marcarPestana('CartaBowls', 'tabBowls')"data-aos="flip-left">BOWLS</p>
+			</div>
+			
+			<div class="contenedorPestana" id="CartaCoffee">
+
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/americano(1).jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/brew.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/filtro.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/iced.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/chailate.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/matcha.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/late.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/espresso.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/flat.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+
+			</div>
+
+
+			<div class="contenedorPestana" id="CartaToasts">
+
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/salmon.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/pollo.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/fresa.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/avocado.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/banana.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/penaut.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/honey.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/egg.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/chocolate.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+
+			</div>
+
+
+
+			<div class="contenedorPestana" id="CartaBowls">
+
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/bowl1.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/bowl2.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/bowl3.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/bowl4.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/bowl5.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/bowl6.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/bowl7.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/bowl8.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+				<div class="producto">
+					<div class="imagenProducto">
+						<img src="Media/bowl9.jpg" alt="">
+					</div>
+					<p class="nombreProducto">Nombre producto</p>
+					<p class="precio">Precio</p>
+				</div>
+			</div>
+
+
+
+
+		</section>
+
+	    <section id="shop">
+
+	    <h2 class="tituloSeccion titulosBlanco" data-aos="flip-left">SHOP</h2>
+
+	     <div id="accordion" data-aos="flip-left">
+        <h2 class="accordion-header">CAMISETA</h2>
+        <div class="accordion-content">
+            Camiseta oversize gris de manga corta.
+        </div>
+        <h2 class="accordion-header">GORRO</h2>
+        <div class="accordion-content">
+            Gorro de lana amarillo.
+        </div>
+        <h2 class="accordion-header">SUDADERA</h2>
+        <div class="accordion-content">
+            Sudadera oversize verde.
+        </div>
+    </div>
+		<div id="contPestanas">
+
+	    	<div class="articulo">
+					<div class="imagenArticulo">
+						<img src="Media/GRIS.jpg" alt="">
+					</div>
+					<p class="nombreArticulo">Nombre del articulo</p>
+					<p class="precioA">Precio</p>
+					<div class="tooltip">Articulo disponible </div>
+			</div>
+				<div class="articulo">
+					<div class="imagenArticulo">
+						<img src="Media/gorro.jpg" alt="">
+					</div>
+					<p class="nombreArticulo">Nombre del articulo</p>
+					<p class="precioA">Precio</p>
+					<div class="tooltip">Fuera de stock</div>
+				</div>
+				<div class="articulo">
+					<div class="imagenArticulo">
+						<img src="Media/sudadera.jpg" alt="">
+					</div>
+					<p class="nombreArticulo">Nombre del articulo</p>
+					<p class="precioA">Precio</p>
+					<div class="tooltip">Fuera de stock</div>
+
+				</div>
+		</div>
+		</section>
+				
+	    
+<section id="gallery">
+    <h2 class="tituloSeccion titulosNegro" data-aos="flip-left">GALLERY</h2>
+
+    <div id="filterTabs">
+        <button class="filterTab" onclick="filterSelection('all')">All</button>
+        <button class="filterTab" onclick="filterSelection('food')">Wood</button>
+        <button class="filterTab" onclick="filterSelection('store')">Store</button>
+        <!-- Agrega más botones de pestañas para otros filtros si es necesario -->
+    </div>
+
+    <div id="contGallery">
+        <img class="imgGal food" src="Media/takeaway.jpg" alt="">
+        <img class="imgGal store" src="Media/store2.jpg" alt="">
+        <img class="imgGal store" src="Media/lamp.jpg" alt=""> 
+        <img class="imgGal food" src="Media/menu.jpg" alt="">
+        <img class="imgGal store" src="Media/BUSY.jpg" alt="">
+        <img class="imgGal" src="Media/wall.jpg" alt="">
+    </div>
+
+    <div id="modalLightBoxG">
+        <div id="imageToShow"></div>
+        <button class="lbButtons lbbRight" onclick="nextImgGal()">
+            <i class="fa-solid fa-angles-right"></i>
+        </button>
+        <button class="lbButtons lbbLeft" onclick="prevImgGal()">
+            <i class="fa-solid fa-angles-left"></i>
+        </button>
+    </div>
+</section>
+
+	<div class="parallax-window" data-parallax="scroll" data-image-src="Media/japan.jpg"></div>
+
+	<section id="contact">
+	    <h2 class="tituloSeccion titulosNegro" data-aos="flip-left">CONTACT</h2>
+
+	    <div id="contContact">
+	    	<iframe id ="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4696.11444543641!2d-5.990208850583844!3d37.39203514576705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c05109a541f%3A0xbda4ae6de1fed2c4!2sSetas%20de%20Sevilla!5e0!3m2!1ses-419!2ses!4v1710095077478!5m2!1ses-419!2ses" width="600" height="524" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-aos="zoom-in"></iframe>
+
+	    	<form action="" id="formulario">
+	    		
+	    		<p id="textoEvents">Events:</p>
+
+	    		<input id = "formNombre" type="text" name= "Nombre" placeholder="Full Name" data-aos="zoom-in" required>
+
+	    		<input id="formEmail" type="Email" name= "Email" placeholder="Email" data-aos="zoom-in"required>
+
+	    		<input id="formText" type="text" name= "Mensaje" placeholder="Message" data-aos="zoom-in"required>
+
+	    		<input id= "botonEnviar" onclick="modalReserva()" value="Submit" data-aos="zoom-in">
+	    	</form>
+
+	    	
+
+
+	    <!-- MODAL DE RESERVA-->
+
+	<div id="modalReserva">
+		<div id="modaleBoxR">
+			<h1> Confirmación del evento</h1>
+			<p id="mensajeReserva">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, neque?</p>
+			<button onclick="cerrarMBR()">Start</button>
+		</div>
+
+	</div>
+
+	    
+
+	</section>
+ <footer id="pie">
+
+	<a href=""><i class="fa-brands fa-instagram insta"></i>
+    <a href=""><i class="fa-brands fa-tiktok tik"></i>
+
+ </footer>
+
+<script>
+
+	
+	modalBienvenida();
+
+	//setInterval(heroSlideshow,3000);
+	
+
+	readyLightbox();
+
+</script>
+
+<script>
+  AOS.init();
+</script>
+
+<script>$('.parallax-window').parallax("Media/japan.jpg")</script>
+
+
+</body>
+</html>
